@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Open & Close</title>
+    <script>
+        function openAndClose() {
+            let newWindow = window.open("https://kampusinfo.my.id/2025/02/21/fe-unissula-bertransformasi-berstandar-internasional/", "_blank"); // Buka di tab baru
+            
+            if (newWindow) {
+                setTimeout(() => {
+                    newWindow.close();
+                }, 60000);
+            } else {
+                alert("Popup diblokir! Izinkan popup untuk menjalankan script ini.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openAndClose()">Buka & Tutup Website</button>
+</body>
+</html>
